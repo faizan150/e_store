@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="flex py-6 flex-col gap-y-10 lg:flex-row">
       {/* Left Side Div */}
       <div  className="flex-1">
-        <Badge className="py-3 px-6 rounded-lg bg-blue-200 text-blue-700 ">
+        <Badge className="py-3 px-6 rounded-lg bg-slate-200 text-blue-700 ">
           Badge
         </Badge>
         <h1 className="scroll-m-20 text-4xl  font-extrabold tracking-tight lg:text-5xl mt-6">
@@ -23,7 +23,7 @@ const Hero = () => {
       </div>
       {/* Right Side Div */}
 
-      <div className="flex-1">
+      <div className="flex-1 rounded-full bg-purple-200">
         <Image src={HeroImage} alt="hero image" />
       </div>
     </section>
