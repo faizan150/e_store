@@ -3,17 +3,23 @@
 
 import { Button } from "./button"
 import { useDispatch } from "react-redux"
+import { toast } from "react-hot-toast"
 import { counterActions } from "@/store/slice/cartSlice"
 
 
 const AddToCart = () => {
-    const dispatch = useDispatch()
-    const additem = ()=>{
-        dispatch(counterActions.addToCart({quantity:1}))
-    }
-  return (
-    <Button className="bg-gray-500  text-white rounded" onClick={AddToCart}>Add To Cart</Button>
-  )
+
+  const dispatch = useDispatch();
+  const addItem = () => {
+      dispatch(counterActions.addToCart({ quantity: 1}));
+      toast.success("Product Added")
+  };
+
+return (
+  <Button onClick={addItem}>
+      Add To Cart
+  </Button>
+)
 }
 
 export default AddToCart
