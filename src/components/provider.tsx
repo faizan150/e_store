@@ -8,7 +8,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
     return (
         <Provider store={store}>
             {children}
-            <Toaster />
+            <Toaster position="top-right" reverseOrder={true} />
         </Provider>
     )
 }
