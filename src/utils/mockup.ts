@@ -6,6 +6,7 @@ import { Product } from "./types";
 export const products: Product[] = [
   {
     id: 1,
+    tagline: "Dress",
     name: "Product-1",
     category: "female",
     price: 20,
@@ -13,6 +14,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
+    tagline: "Dress",
     name: "Product-2",
     category: "female",
     price: 150,
@@ -20,6 +22,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
+    tagline: "Dress",
     name: "Product-3",
     category: "female",
     price: 250,
@@ -27,6 +30,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
+    tagline: "Dress",
     name: "Product-5",
     category: "male",
     price: 550,
@@ -34,6 +38,7 @@ export const products: Product[] = [
   },
   {
     id: 4,
+    tagline: "Dress",
     name: "Product-4",
     category: "male",
     price: 350,
@@ -41,6 +46,7 @@ export const products: Product[] = [
   },
   {
     id: 6,
+    tagline: "Dress",
     name: "Product-6",
     category: "kids",
     price: 650,
@@ -48,10 +54,10 @@ export const products: Product[] = [
   },
   {
     id: 7,
+    tagline: "Dress",
     name: "Product-7",
     category: "kids",
     price: 550,
     image: P1,
   },
-  
 ];

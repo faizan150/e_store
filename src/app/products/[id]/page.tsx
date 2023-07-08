@@ -1,11 +1,15 @@
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/utils/mockup";
 import Image, { StaticImageData } from "next/image";
+import Quantity from "@/components/quantity";
+import AddToCart from "@/components/ui/AddToCart";
 
 export default function Page({ params }: { params: { id: number } }) {
   const filter = products.filter((item) => {
     return item.id == params.id;
   });
+
+  const sizes = ["XS", "SM", "MD", "LG", "XL"];
   console.log(filter);
 
   return (
@@ -16,11 +20,40 @@ export default function Page({ params }: { params: { id: number } }) {
             <div>
               <Image src={item.image as StaticImageData} alt={item.name} />
             </div>
-            <div className="font-bold">
-              Product Details
-              <p>Name: {item.name}</p>
-              <p>Price: ${item.price}</p>
-              <p>Category: {item.category}</p>
+            <div>
+              <div className="font-bold">
+                <h1 className="text-2xl ">{item.name}</h1>
+                <h2 className="text-base text-gray-400 font-semibold">
+                  {" "}
+                  {item.tagline}
+                </h2>
+              </div>
+              <div>
+                <h3 className="text-xs mt-6 font-semibold">SELECT SIZE</h3>
+                <div className="flex gap-x-2">
+                  {sizes.map((item) => {
+                    return (
+                      <div
+                        key={item}
+                        className="h-5 w-5  mt-2 bg-gray-300  flex justify-center items-center rounded-full hover:shadow-2xl duration-300 "
+                      >
+                        <span className="text-[10px] font-bold text-gray-600">
+                          {item}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              {/* Quantity Div */}
+              <div className="flex gap-x-3 mt-6 items-center">
+                <h3 className="text-[10px] font-semibold">Quantity</h3>
+                  <Quantity />
+              </div>
+              <div className="mt-5 flex gap-x-4 items-center justify-center">
+              <AddToCart  />
+              <h2 className="text-2xl font-bold">${item.price.toFixed(2)}</h2>
+              </div>
             </div>
           </div>
         );
