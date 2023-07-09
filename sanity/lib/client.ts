@@ -3,8 +3,9 @@ import { createClient } from 'next-sanity'
 import { apiVersion, dataset, projectId, useCdn } from '../env'
 
 export const client = createClient({
-  apiVersion,
-  dataset,
-  projectId,
-  useCdn,
+  token:process.env.SANITY_ACCESS_TOKEN,
+  apiVersion:'2023-07-09',
+  dataset:'testing', 
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  useCdn:true,
 })
