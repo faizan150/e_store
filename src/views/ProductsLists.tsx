@@ -4,10 +4,43 @@ import P2 from 'public/p2.png';
 import P3 from 'public/p3.png';
 import Image, {StaticImageData} from 'next/image';
 import { products } from '@/utils/mockup';
+import { client } from "@/lib/sanityClient";
 
-const ProductList = () => {
+
+
+
+
+
+
+
+
+
+
+export const getProductData = async () => {
+  const res = await client.fetch(`*[_type=="product"]{
+    price, product_image, cloth_type -> {
+      cloth_tyoey_name
+    }, product_care, cloth_category, title, product_details, _id
+  }`)
+  return res 
+}
+
+interface Iproduct {
+  title: string;
+  description: string;
+}
+
+
+
+
+
+const ProductList = async () => {
   const showproducts = products.slice(0,3) 
-  console.log(showproducts);
+  // console.log(showproducts);
+  const data = await getProductData()
+
+  console.log(data);
+  
   
   return (
     <div className='flex justify-evenly mt-16 py-16'>

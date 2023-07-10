@@ -14,7 +14,7 @@ interface ProductCardProps {
 
 const ProductCard: FC<ProductCardProps> = ({id, title, price, img, category }) => {
   // console.log(title);
-  console.log(id);
+  // console.log(id);
   
 
   return (
