@@ -39,7 +39,7 @@ const ProductList = async () => {
   // console.log(showproducts);
   const data = await getProductData()
 
-  console.log(data);
+  // console.log(data);
   
   
   return (

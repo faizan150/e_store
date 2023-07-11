@@ -30,7 +30,8 @@ const ProductCard: FC<ProductCardProps> = ({id, title, price, img, category }) =
           </span>
         </p>
 
-        <AddToCart />
+        {/* <AddToCart /> */}
+        <button className="border bg-blue-500 text-white rounded px-3 py-2">Add To Cart</button>
       </div>
     </Link>
   );
