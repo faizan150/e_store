@@ -1,3 +1,5 @@
+'use client'
+
 import P1 from "public/p1.webp";
 import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
@@ -12,13 +14,28 @@ interface ProductCardProps {
   category: string; 
 }
 
+
+
+
 const ProductCard: FC<ProductCardProps> = ({id, title, price, img, category }) => {
+  const handleAddToCart  = async  ()=>{
+    const res = await fetch('/api/cart',{
+      method:'POST',
+      body: JSON.stringify({
+        product_id: id,
+      })
+    })
+    const result = await res.json()
+
+    
+    
+  }
   // console.log(title);
   // console.log(id);
   
 
   return (
-    <Link href={`/products/${id}`}>
+    // <Link href={`/products/${id}`}>
       <div className="py-5">
         <Image src={img} alt="Product-1" />
         <h3 className="font-bold text-lg mt-3">{title}</h3>
@@ -31,9 +48,9 @@ const ProductCard: FC<ProductCardProps> = ({id, title, price, img, category }) =
         </p>
 
         {/* <AddToCart /> */}
-        <button className="border bg-blue-500 text-white rounded px-3 py-2">Add To Cart</button>
+        <button className="border bg-blue-500 text-white rounded px-3 py-2" onClick={handleAddToCart}>Add To Cart</button>
       </div>
-    </Link>
+    // </Link>
   );
 };
 
