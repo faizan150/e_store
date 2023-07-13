@@ -24,8 +24,11 @@ const ProductCard: FC<ProductCardProps> = ({id, title, price, img, category }) =
       body: JSON.stringify({
         product_id: id,
       })
-    })
-    const result = await res.json()
+    }) 
+    const result = await res.json()    
+    
+    console.log(result);
+    
 
     
     
