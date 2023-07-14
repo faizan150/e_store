@@ -26,8 +26,7 @@ const ProductCard: FC<ProductCardProps> = ({id, title, price, img, category }) =
       })
     }) 
     const result = await res.json()    
-    
-    console.log(result);
+  
     
 
     

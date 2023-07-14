@@ -4,10 +4,12 @@ import { v4 as uuid } from "uuid";
 import { db, cartTable } from "@/lib/drizzle";
 import { cookies } from "next/dist/client/components/headers";
 
-export const GET = async (request: Request) => {
+export const GET = async (request: NextRequest) => {
+
+  
   try {
     const res = await db.select().from(cartTable);
-    console.log(res);
+    console.log(res,'here');
     
     return NextResponse.json(res);
   } catch (error) {     
@@ -17,7 +19,7 @@ export const GET = async (request: Request) => {
 
 
 
-export const POST = async (request: Request) => {
+export const POST = async (request: NextRequest) => {
 
 
 

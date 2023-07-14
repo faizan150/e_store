@@ -9,17 +9,20 @@ import { cookies } from "next/dist/client/components/headers";
 
 
 
+
 const getAddToCartProducts = async () => {
     const res = await fetch('/api/cart',{
         method:'GET',
       })
       const result =await res.json()
+      // console.log(result);
+      
 }  
 
 
 const cart = () => {
     const result = getAddToCartProducts()
-    console.log(result);
+    // console.log(result);
     
 
     
