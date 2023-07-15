@@ -10,8 +10,6 @@ export default function Page({ params }: { params: { id: number } }) {
   });
 
   const sizes = ["XS", "SM", "MD", "LG", "XL"];
-  // console.log(filter);
-
   return (
     <div className="flex  mt-16 py-10 flex-wrap">
       {filter.map((item) => {
@@ -46,15 +44,11 @@ export default function Page({ params }: { params: { id: number } }) {
                 </div>
               </div>
               {/* Quantity Div */}
-              <div className="flex gap-x-3 mt-6 items-center">
-                <h3 className="text-[10px] font-semibold">Quantity</h3>
-                  <Quantity />
-              </div>
-              <div className="mt-5 flex gap-x-4 items-center justify-center">
-              <AddToCart  />
-              {/* <button className="border bg-blue-500 text-white rounded px-3 py-2">Add To Cart</button> */}
-              <h2 className="text-2xl font-bold">${item.price.toFixed(2)}</h2>
-              </div>
+              {/* <div className="flex gap-x-3 mt-6 items-center">
+                <h3 className="text-[10px] font-semibold">Quantity</h3> */}
+                  <Quantity price={item.price} id={item.id} />
+              {/* </div> */}
+
             </div>
           </div>
         );

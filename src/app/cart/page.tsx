@@ -15,7 +15,7 @@ const getAddToCartProducts = async () => {
         method:'GET',
       })
       const result =await res.json()
-      // console.log(result);
+      console.log(result,'here');
       
 }  
 
@@ -28,7 +28,13 @@ const cart = () => {
     
   return (
     <>
-
+      <div>
+        {/* Display the cart data */}
+        <p>Id: {result?.id}</p>
+        <p>Product Id: {result?.product_id}</p>
+        <p>Quantity: {result?.quantity}</p>
+        <p>User Id: {result?.user_id}</p>
+      </div>
     </>
   )
 }
