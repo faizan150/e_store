@@ -1,7 +1,15 @@
 import P1 from "public/p1.webp";
+import Image, { StaticImageData } from "next/image";
+
 import P2 from "public/p2.png";
 import P3 from "public/p3.png";
 import { Product } from "./types";
+
+// utils/mockup.ts
+// mockup.ts
+
+// Other mockup data and utilities
+
 
 export const products: Product[] = [
   {

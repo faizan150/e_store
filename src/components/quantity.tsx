@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const Quantity = (params: { price: number; id: number }) => {
   const [num, setNum] = useState(1);
@@ -13,6 +14,9 @@ const Quantity = (params: { price: number; id: number }) => {
       }),
     });
     const result = await res.json();
+    if(result){
+      toast.success('Product Added in the Cart')
+    }
     // Handle the server response here, e.g., show success message or error.
   };
 

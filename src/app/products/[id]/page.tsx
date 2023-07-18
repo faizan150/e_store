@@ -47,6 +47,7 @@ export default function Page({ params }: { params: { id: number } }) {
               {/* <div className="flex gap-x-3 mt-6 items-center">
                 <h3 className="text-[10px] font-semibold">Quantity</h3> */}
                   <Quantity price={item.price} id={item.id} />
+                  {/* Just Adding Some of the commit in the file  */}
               {/* </div> */}
 
             </div>
