@@ -13,7 +13,6 @@ const allProducts = () => {
         {/* <ProductCard title="Product 1" price={123} img= {P1} />
         <ProductCard title="Product 2" price={456} img= {P2} />
         <ProductCard title="Product 3" price={789} img= {P3} /> */}
-        {/* Just adding some of the commit in the github profile  */}
   
   
         {

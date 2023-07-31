@@ -8,3 +8,6 @@ export type Product ={
     category:string,
     image:StaticImageData  | string,
 }
+
+
+
