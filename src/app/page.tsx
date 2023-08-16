@@ -16,6 +16,7 @@ export default function Home() {
       {/* Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, repellendus? Aperiam cum voluptatum, dicta architecto veritatis ducimus sit dolorem quasi, doloribus, natus deserunt molestiae mollitia dolores perspiciatis id impedit cumque illum saepe aspernatur culpa esse. Eveniet ducimus, inventore earum facilis vitae, eaque, dolor fugiat labore iusto porro quae ab deleniti? */}
       {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ut accusamus quos maiores voluptatibus perspiciatis asperiores eaque voluptates hic consequatur. */}
       {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum repudiandae ipsa tempore accusantium, voluptatem est dolore culpa. Ipsum, libero atque exercitationem repellat minus hic voluptatem cupiditate ullam blanditiis rem incidunt sapiente nihil quae excepturi, molestiae architecto quaerat provident earum a? */}
+      {/* Lorem ipsum dolor sit amet. */}
     </>
   );
 }
